@@ -5,14 +5,14 @@ import {
   LinkedinIcon
 } from "lucide-react"
 
-import { Button } from "../ui/button"
-import { Input } from "../ui/input"
-import { Label } from "../ui/label"
-import { Logo } from "./logo"
+import { Button } from "../../ui/button"
+import { Input } from "../../ui/input"
+import { Label } from "../../ui/label"
+import { Logo } from "../icons/logo"
 
 export function Footer() {
   return (
-    <footer>
+    <footer className="px-6 sm:px-0">
       <div className="w-full space-y-16 py-16">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-4 sm:gap-6">
           <div>

@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
+import { Michroma } from "next/font/google";
 
-import localFont from "next/font/local";
 import "./globals.css";
 
-const pcapTerminal = localFont({
-  src: "./assets/fonts/PCapTerminal.otf",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
+const michroma = Michroma({
+  weight: ["400"],
+  subsets: ["latin"]
+})
 
 export const metadata: Metadata = {
   title: "Coderaw | Soluções Web",
@@ -22,9 +21,11 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${pcapTerminal.className} antialiased`}
+        className={`${michroma.className} antialiased`}
       >
-        {children}
+        <div className="min-h-screen w-full sm:max-w-7xl sm:w-full sm:mx-auto">
+          {children}
+        </div>
       </body>
     </html>
   );

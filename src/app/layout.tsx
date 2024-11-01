@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@/components/shared/theme-provider";
 import type { Metadata } from "next";
 import { Michroma } from "next/font/google";
 
@@ -23,9 +24,16 @@ export default function RootLayout({
       <body
         className={`${michroma.className} antialiased`}
       >
-        <div className="min-h-screen w-full sm:max-w-7xl sm:w-full sm:mx-auto">
-          {children}
-        </div>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="min-h-screen w-full sm:max-w-7xl sm:w-full sm:mx-auto">
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

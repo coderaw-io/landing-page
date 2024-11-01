@@ -1,6 +1,3 @@
-import blackLogo from "@/app/assets/images/black-logo.png"
-import Image from "next/image"
-
 import {
   FacebookIcon,
   GithubIcon,
@@ -11,6 +8,7 @@ import {
 import { Button } from "../ui/button"
 import { Input } from "../ui/input"
 import { Label } from "../ui/label"
+import { Logo } from "./logo"
 
 export function Footer() {
   return (
@@ -130,13 +128,7 @@ export function Footer() {
                 className="hidden sm:block"
                 aria-label="Coderaw logo"
               >
-                <Image
-                  src={blackLogo}
-                  width={600}
-                  height={300}
-                  className="w-[60%] mb-2"
-                  alt="Ícone da empresa Coderaw"
-                />
+                <Logo className="w-[60%] mb-2" />
               </a>
 
               <div className="flex flex-col space-y-3">

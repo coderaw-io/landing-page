@@ -133,10 +133,10 @@ export function Footer() {
 
               <div className="flex flex-col space-y-3">
                 <Label
-                  className="font-medium text-foreground"
+                  className="font-medium text-foreground text-sm"
                   htmlFor="current-email"
                 >
-                  Se inscreva na nossa newsletter
+                  Treinamentos e conteúdos
                 </Label>
 
                 <Input

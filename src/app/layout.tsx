@@ -30,7 +30,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="min-h-screen w-full sm:max-w-7xl sm:w-full sm:mx-auto">
+          <div className="min-h-screen w-full sm:max-w-6xl sm:w-full sm:mx-auto">
             {children}
           </div>
         </ThemeProvider>

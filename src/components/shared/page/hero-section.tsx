@@ -16,7 +16,7 @@ export function HeroSection() {
           "absolute inset-0 [mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)]",
         )}
       />
-      <div className="relative z-10 max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-8">
+      <div className="relative z-10 max-w-[85rem] mx-auto px-4 py-12 sm:px-6 lg:px-8 sm:py-24 space-y-8">
         <div className="flex min-h-10 items-center justify-center">
           <div
             className={cn(

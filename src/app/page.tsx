@@ -8,7 +8,7 @@ export default function LandingPage() {
   return (
     <>
       <Header />
-      <div className="pt-16">
+      <div className="sm:pt-16">
         <HeroSection />
       </div>
       <IntegrationsSection />

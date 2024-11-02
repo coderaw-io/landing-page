@@ -8,7 +8,7 @@ import {
 import { Button } from "../../ui/button"
 import { Input } from "../../ui/input"
 import { Label } from "../../ui/label"
-import { Logo } from "../icons/logo"
+import { Icon } from "../icons/icon"
 
 export function Footer() {
   return (
@@ -128,7 +128,7 @@ export function Footer() {
                 className="hidden sm:block"
                 aria-label="Coderaw logo"
               >
-                <Logo className="w-[60%] mb-2" />
+                <Icon className="w-1/5 mb-2" />
               </a>
 
               <div className="flex flex-col space-y-3">
@@ -136,7 +136,7 @@ export function Footer() {
                   className="font-medium text-foreground text-sm"
                   htmlFor="current-email"
                 >
-                  Treinamentos e conteúdos
+                  Conteúdos de tecnologia
                 </Label>
 
                 <Input

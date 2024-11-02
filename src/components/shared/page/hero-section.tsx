@@ -26,7 +26,7 @@ export function HeroSection() {
             <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400">
               <span className="flex items-center gap-2 text-sm">
                 <ZapIcon className="size-4" />
-                Ferramentas modernas
+                Integrações com IA
               </span>
             </AnimatedShinyText>
           </div>

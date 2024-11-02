@@ -1,4 +1,4 @@
-import { Icon } from "../icons/icon";
+import { Logo } from "../icons/logo";
 import { ThemeToggle } from "../theme-toggle";
 
 export function Header() {
@@ -8,10 +8,10 @@ export function Header() {
         <div className="px-4 md:px-0 flex justify-between items-center">
           <div>
             <a
-              className="flex-none rounded-md text-xl inline-block font-semibold focus:outline-none focus:opacity-80"
+              className="h-[56px] flex items-center rounded-[0.3rem]"
               href="/"
             >
-              <Icon className="w-[52px] h-auto" />
+              <Logo className="w-[60%] h-auto object-cover" />
             </a>
           </div>
 
@@ -34,7 +34,7 @@ export function Header() {
               href="#"
               className="py-0.5 md:py-3 px-4 md:px-1 text-foreground hover:text-primary focus:outline-none"
             >
-              Orçamento
+              Serviços
             </a>
 
             <a

@@ -1,3 +1,5 @@
+import { AnimatedBeamSection } from "@/components/shared/page/animated-beam-section";
+import { BoutiqueSection } from "@/components/shared/page/boutique-section";
 import { Footer } from "@/components/shared/page/footer";
 import { Header } from "@/components/shared/page/header";
 import { HeroSection } from "@/components/shared/page/hero-section";
@@ -8,11 +10,11 @@ export default function LandingPage() {
   return (
     <>
       <Header />
-      <div className="sm:pt-16">
-        <HeroSection />
-      </div>
+      <HeroSection />
       <IntegrationsSection />
       <ToolsSection />
+      <BoutiqueSection />
+      <AnimatedBeamSection />
       <Footer />
     </>
   );

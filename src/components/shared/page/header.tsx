@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Logo } from "../icons/logo";
 import { ThemeToggle } from "../theme-toggle";
 import { MobileMenu } from "./mobile-menu";
@@ -6,14 +8,14 @@ export function Header() {
   return (
     <>
       <header className="hidden sm:flex flex-wrap sticky top-0 inset-x-0 md:justify-start md:flex-nowrap z-50 w-full text-sm">
-        <nav className="bg-background mt-6 relative max-w-3xl w-full border border-border rounded-[0.3rem] flex items-center justify-between pl-1 pr-3 mx-auto">
+        <nav className="bg-background relative max-w-6xl w-full flex items-center justify-between mx-auto pt-2">
           <div>
-            <a
+            <Link
               className="h-[56px] flex items-center rounded-[0.3rem]"
               href="/"
             >
-              <Logo className="w-[60%] h-auto object-cover" />
-            </a>
+              <Logo className="w-1/2 h-auto object-cover" />
+            </Link>
           </div>
 
           <div
@@ -21,13 +23,6 @@ export function Header() {
             className="block hs-collapse overflow-hidden transition-all duration-300 basis-full grow"
           >
             <div className="flex justify-end items-center gap-6 ps-7">
-              <a
-                href="#"
-                className="py-3 text-foreground hover:text-primary focus:outline-none"
-              >
-                Blog
-              </a>
-
               <a
                 href="#"
                 className="py-3 text-foreground hover:text-primary focus:outline-none"
@@ -50,12 +45,12 @@ export function Header() {
 
       <div className="h-16 flex justify-between items-center p-4 gap-3 sm:hidden">
         <div>
-          <a
+          <Link
             className="h-12 flex items-center rounded-[0.3rem]"
             href="/"
           >
             <Logo className="w-1/2 h-auto object-cover" />
-          </a>
+          </Link>
         </div>
 
         <ThemeToggle className="w-16 h-8" />

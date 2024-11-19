@@ -44,14 +44,6 @@ export function MobileMenu() {
             className="flex items-center gap-3 text-foreground hover:text-primary focus:outline-none"
           >
             <div className="h-5 w-1 bg-primary" />
-            Blog
-          </Link>
-
-          <Link
-            href="#"
-            className="flex items-center gap-3 text-foreground hover:text-primary focus:outline-none"
-          >
-            <div className="h-5 w-1 bg-primary" />
             Serviços
           </Link>
 

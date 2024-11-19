@@ -1,7 +1,15 @@
+"use client"
+
+import { HeroPattern } from "../hero-pattern";
+
 export function ToolsSection() {
   return (
-    <section>
-      <div className="py-12 md:py-24">
+    <section data-aos="fade-right" className="relative overflow-hidden">
+      <div className="absolute inset-0 -z-10">
+         <HeroPattern />
+      </div>
+
+      <div className="py-16 md:py-24 lg:py-28">
         <div className="mx-auto px-6 max-w-6xl">
           <div className="max-w-3xl text-center mx-auto">
             <h2 className="text-3xl text-foreground font-medium md:text-4xl lg:text-5xl xl:text-6xl">
@@ -14,7 +22,7 @@ export function ToolsSection() {
             </p>
           </div>
 
-          <div className="mt-12 relative w-fit h-fit sm:mx-auto sm:px-0 -mx-6 px-6 overflow-x-auto">
+          <div className="mt-12 relative z-10 w-fit h-fit sm:mx-auto sm:px-0 -mx-6 px-6 overflow-x-auto">
             <div className="mb-3 flex w-fit mx-auto gap-3 text-foreground">
               <div className="border flex relative *:relative *:size-12 *:m-auto size-20 mx-auto rounded-[0.3rem]">
                 <svg viewBox="0 0 128 128">

@@ -1,6 +1,10 @@
 export function IntegrationsSection() {
   return (
     <div className="px-4 md:px-6 lg:px-8">
+      <h2 className="text-xl text-center font-medium">
+        Integre ferramentas externas de forma eficiente
+      </h2>
+
       <div className="relative py-3 overflow-hidden sm:py-6 before:absolute before:top-0 before:start-0 before:z-10 before:w-20 before:h-full after:absolute after:top-0 after:end-0 after:w-20 after:h-full">
         <div className="grid grid-cols-3 items-center gap-x-4 sm:flex sm:justify-between sm:items-center">
           <svg

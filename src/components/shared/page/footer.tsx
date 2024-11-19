@@ -12,7 +12,7 @@ import { Icon } from "../icons/icon"
 
 export function Footer() {
   return (
-    <footer className="px-6 sm:px-0">
+    <footer data-aos="fade-down" className="px-6 sm:px-0">
       <div className="w-full space-y-16 py-16">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-4 sm:gap-6">
           <div>
@@ -34,7 +34,7 @@ export function Footer() {
                   href="#"
                   className="text-sm text-muted-foreground hover:text-primary"
                 >
-                  Fundadores
+                  Blog
                 </a>
               </li>
 
@@ -81,7 +81,8 @@ export function Footer() {
             <ul className="mt-4 list-inside space-y-4">
               <li>
                 <a
-                  href="#"
+                  href="https://github.com/coderaw-io"
+                  target="_blank"
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary"
                 >
                   <GithubIcon className="size-4" />
@@ -123,8 +124,8 @@ export function Footer() {
 
           <div>
             <form className="w-full">
-              <a 
-                href="/" 
+              <a
+                href="/"
                 className="hidden sm:block"
                 aria-label="Coderaw logo"
               >

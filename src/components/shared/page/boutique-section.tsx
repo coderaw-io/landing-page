@@ -1,6 +1,7 @@
 import GridPattern from "@/components/magic-ui/grid-pattern";
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 export function BoutiqueSection() {
@@ -43,9 +44,11 @@ export function BoutiqueSection() {
           </div>
 
           <div className="relative flex justify-center items-center z-10 pt-6 md:pt-12">
-            <Button type="button" className="w-full sm:max-w-md">
-              Fale conosco
-            </Button>
+            <Link href="/contato" className="w-full md:max-w-md">
+              <Button type="button" className="w-full">
+                Fale conosco
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

@@ -1,9 +1,10 @@
 import "./globals.css";
 
+import { AOSInit } from "@/components/shared/aos-init";
 import { ThemeProvider } from "@/components/shared/theme-provider";
 import type { Metadata } from "next";
 import { Michroma } from "next/font/google";
-import { AOSInit } from "@/components/shared/aos-init";
+import { Toaster } from 'sonner';
 
 const michroma = Michroma({
   weight: ["400"],
@@ -35,6 +36,7 @@ export default function RootLayout({
           <div className="min-h-screen w-full sm:max-w-6xl sm:w-full sm:mx-auto">
             {children}
           </div>
+          <Toaster richColors />
         </ThemeProvider>
       </body>
     </html>

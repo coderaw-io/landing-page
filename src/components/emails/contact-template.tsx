@@ -98,7 +98,7 @@ const imageSection = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  padding: "20px 0",
+  padding: "20px 40px",
 };
 
 const coverSection = { backgroundColor: "#fff" };

@@ -23,19 +23,19 @@ export function Header() {
             className="block hs-collapse overflow-hidden transition-all duration-300 basis-full grow"
           >
             <div className="flex justify-end items-center gap-6 ps-7">
-              <a
-                href="#"
+              <Link
+                href="/servicos"
                 className="py-3 text-foreground hover:text-primary focus:outline-none"
               >
                 Serviços
-              </a>
+              </Link>
 
-              <a
-                href="#"
+              <Link
+                href="/contato"
                 className="py-3 text-foreground hover:text-primary focus:outline-none"
               >
                 Contato
-              </a>
+              </Link>
 
               <ThemeToggle />
             </div>

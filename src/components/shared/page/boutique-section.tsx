@@ -42,7 +42,7 @@ export function BoutiqueSection() {
             </p>
           </div>
 
-          <div className="pt-6 md:pt-12">
+          <div className="relative flex justify-center items-center z-10 pt-6 md:pt-12">
             <Button type="button" className="w-full sm:max-w-md">
               Fale conosco
             </Button>

@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 import {
   FacebookIcon,
   GithubIcon,
@@ -21,30 +23,30 @@ export function Footer() {
             </span>
             <ul className="mt-4 list-inside space-y-4">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/sobre-nos"
                   className="text-sm text-muted-foreground hover:text-primary"
                 >
                   Sobre nós
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
-                  href="#"
-                  className="text-sm text-muted-foreground hover:text-primary"
-                >
-                  Blog
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#"
+                <Link
+                  href="/servicos"
                   className="text-sm text-muted-foreground hover:text-primary"
                 >
                   Serviços
-                </a>
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/contato"
+                  className="text-sm text-muted-foreground hover:text-primary"
+                >
+                  Contato
+                </Link>
               </li>
             </ul>
           </div>

@@ -1,7 +1,24 @@
+"use client"
+
 import { AnimatedBeamMultiple } from "@/components/magic-ui/animated-beam-multiple";
 import { Button } from "@/components/ui/button";
+import { LoaderIcon } from "lucide-react";
+import { useState } from "react";
 
 export function AnimatedBeamSection() {
+  const [loading, setLoading] = useState(false);
+
+  const handleSendEmail = async () => {
+    setLoading(true);
+    try {
+      await fetch("/api/send-email", { method: "POST" });
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
+  }
+
   return (
     <div data-aos="fade-right" className="grid grid-cols-1 items-center gap-4 py-6 md:grid-cols-2 md:py-16">
       <div className="hidden md:block">
@@ -23,8 +40,13 @@ export function AnimatedBeamSection() {
         </div>
 
         <div className="pt-6 md:pt-12">
-          <Button type="button" className="w-full sm:max-w-md">
-            Entrar em contato
+          <Button 
+            type="button" 
+            className="w-full sm:max-w-md disabled:opacity-75" 
+            onClick={handleSendEmail}
+            disabled={loading}
+          >
+            {loading ? <LoaderIcon className="size-4 animate-spin" /> : "Entrar em contato"}
           </Button>
         </div>
       </div>

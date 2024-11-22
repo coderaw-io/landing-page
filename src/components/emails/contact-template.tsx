@@ -12,11 +12,12 @@ import {
   Text
 } from "@react-email/components";
 
-interface ContactTemplateEmailProps {
-  firstName: string;
-}
+import { EmailRequest } from "@/@types/email";
 
-export const ContactTemplateEmail = ({ firstName }: ContactTemplateEmailProps) => (
+export const ContactTemplateEmail = ({ 
+  firstName,
+  lastName,
+}: EmailRequest) => (
   <Html>
     <Head />
     <Preview>Equipe comercial da Coderaw.io</Preview>
@@ -33,7 +34,7 @@ export const ContactTemplateEmail = ({ firstName }: ContactTemplateEmailProps) =
           </Section>
           <Section style={upperSection}>
             <Heading style={h1}>
-              Olá {firstName}, <br />
+              Olá {firstName} {lastName}, <br />
               agradecemos o interesse em nossos <br />
               serviços de tecnologia.
             </Heading>
@@ -48,7 +49,7 @@ export const ContactTemplateEmail = ({ firstName }: ContactTemplateEmailProps) =
           <Hr />
           <Section style={lowerSection}>
             <Text style={cautionText}>
-              A <strong>Coderaw.io</strong> é uma boutique de software especializada {" "}
+              A <strong>Coderaw.io</strong> é uma butique de software especializada {" "}
               em soluções web para empresas de pequeno, médio e grande porte.
             </Text>
           </Section>

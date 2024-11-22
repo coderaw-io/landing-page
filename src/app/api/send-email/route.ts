@@ -1,18 +1,21 @@
 import ContactTemplateEmail from '@/components/emails/contact-template';
 
-import { env } from '@/app/utils/env';
+import { EmailRequest } from '@/@types/email';
+import { resendApiKey } from '@/lib/resend';
 
-import { Resend } from 'resend';
-
-const resend = new Resend(env.NEXT_PUBLIC_RESEND_API_KEY);
-
-export async function POST() {
+export async function POST({
+  firstName,
+  lastName
+}: EmailRequest) {
   try {
-    const { data, error } = await resend.emails.send({
+    const { data, error } = await resendApiKey.emails.send({
       from: 'Coderaw <comercial@coderaw.io>',
       to: ['mattheuscontato17@gmail.com'],
       subject: 'Contato',
-      react: ContactTemplateEmail({ firstName: "Matheus Roberto" }),
+      react: ContactTemplateEmail({ 
+        firstName: `${firstName}`,
+        lastName: `${lastName}`
+      }),
     });
 
     if (error) {

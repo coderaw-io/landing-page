@@ -1,4 +1,4 @@
-import axios from "axios";
+import CustomerTemplate from "@/components/emails/customer-template";
 
 import { resendApiKey, resendAudienceId } from "@/lib/resend";
 import { NextRequest, NextResponse } from "next/server";
@@ -13,29 +13,25 @@ export async function POST(request: NextRequest) {
       message
     } = await request.json();
 
-    const sendEmailRequest = await axios.post(
-      new URL('/api/send-customer-email', request.url).toString(),
-      { email, firstName, lastName, phoneNumber, message },
-      {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }
-    );
+    const { 
+      data: emailData, 
+      error: errorEmailData 
+    } = await resendApiKey.emails.send({
+      from: "comercial@coderaw.io",
+      to: ["felipe-mattioli98@hotmail.com"],
+      subject: 'Interesse pelos serviços prestados',
+      react: CustomerTemplate({
+        firstName,
+        lastName,
+        email,
+        phoneNumber,
+        message
+      })
+    });
 
-    const emailData = sendEmailRequest.data;
-    
-    const sendReplyEmailRequest = await axios.post(
-      new URL('/api/send-reply-email', request.url).toString(),
-      { email, firstName, lastName },
-      {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      }
-    );
-
-    const replyEmailData = sendReplyEmailRequest.data;
+    if (errorEmailData) {
+      return Response.json({ errorEmailData }, { status: 500 });
+    }
 
     const { 
       data: contactData, 
@@ -57,7 +53,6 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ 
       email: emailData,
-      replyEmail: replyEmailData,
       contact: contactData, 
     });
   } catch (error) {

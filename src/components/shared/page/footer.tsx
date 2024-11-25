@@ -1,45 +1,23 @@
 import Link from "next/link"
 
 import {
-  FacebookIcon,
   GithubIcon,
   InstagramIcon,
   LinkedinIcon
 } from "lucide-react"
 
-import { Button } from "../../ui/button"
-import { Input } from "../../ui/input"
-import { Label } from "../../ui/label"
-import { Icon } from "../icons/icon"
+import { NewsLetterForm } from "../newsletter-form"
 
 export function Footer() {
   return (
     <footer data-aos="fade-down" className="px-6 sm:px-0">
       <div className="w-full space-y-16 py-16">
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-4 sm:gap-6">
+        <div className="flex flex-col space-y-12 md:flex-row md:justify-between md:items-center">
           <div>
             <span className="font-medium text-foreground">
               Empresa
             </span>
             <ul className="mt-4 list-inside space-y-4">
-              <li>
-                <Link
-                  href="/sobre-nos"
-                  className="text-sm text-muted-foreground hover:text-primary"
-                >
-                  Sobre nós
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href="/servicos"
-                  className="text-sm text-muted-foreground hover:text-primary"
-                >
-                  Serviços
-                </Link>
-              </li>
-
               <li>
                 <Link
                   href="/contato"
@@ -52,111 +30,46 @@ export function Footer() {
           </div>
 
           <div>
-            <span className="text-sm font-medium text-foreground">
-              Produtos
-            </span>
-            <ul className="mt-4 list-inside space-y-4">
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-muted-foreground hover:text-primary"
-                >
-                  Condotec
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#"
-                  className="text-sm text-muted-foreground hover:text-primary"
-                >
-                  Spendmanagement
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
             <span className="font-medium text-foreground">
               Social
             </span>
             <ul className="mt-4 list-inside space-y-4">
               <li>
-                <a
+                <Link
                   href="https://github.com/coderaw-io"
                   target="_blank"
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary"
                 >
                   <GithubIcon className="size-4" />
                   Github
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="https://www.linkedin.com/company/coderaw"
+                  target="_blank"
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary"
                 >
                   <LinkedinIcon className="size-4" />
                   Linkedin
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
-                  href="#"
-                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary"
-                >
-                  <FacebookIcon className="size-4" />
-                  Facebook
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="#"
+                <Link
+                  href="https://www.instagram.com/coderaw.io/profilecard"
+                  target="_blank"
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary"
                 >
                   <InstagramIcon className="size-4" />
                   Instagram
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
 
-          <div>
-            <form className="w-full">
-              <a
-                href="/"
-                className="hidden sm:block"
-                aria-label="Coderaw logo"
-              >
-                <Icon className="w-1/5 mb-2" />
-              </a>
-
-              <div className="flex flex-col space-y-3">
-                <Label
-                  className="font-medium text-foreground text-sm"
-                  htmlFor="current-email"
-                >
-                  Conteúdos de tecnologia
-                </Label>
-
-                <Input
-                  type="email"
-                  id="current-email"
-                  name="current-email"
-                  placeholder="Informe o seu e-mail"
-                  className="placeholder:text-xs"
-                  required
-                />
-
-                <Button type="button">
-                  Inscreva-se
-                </Button>
-              </div>
-            </form>
-          </div>
+          <NewsLetterForm />
         </div>
 
         <div className="flex flex-col space-y-3 py-3 sm:flex-row sm:justify-between sm:items-center sm:space-y-0">

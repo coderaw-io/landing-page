@@ -11,12 +11,14 @@ import {
   FormMessage
 } from "@/components/ui/form";
 
+import { maskPhoneNumber } from "@/app/utils/mask-phone-number";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { LoaderIcon } from "lucide-react";
-import { useForm } from "react-hook-form";
+import { useEffect } from "react";
+import { Controller, useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { z } from "zod";
 
@@ -62,6 +64,12 @@ export function ContactForm() {
       message: "",
     },
   })
+
+  const phoneNumber = form.watch('phoneNumber');
+
+  useEffect(() => {
+    form.setValue('phoneNumber', maskPhoneNumber(phoneNumber));
+  }, [phoneNumber, form.setValue]);
 
   const onSubmit = async (data: FormData) => {
     try {
@@ -135,17 +143,23 @@ export function ContactForm() {
             )}
           />
 
-          <FormField
+          <Controller
             name="phoneNumber"
             control={form.control}
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Telefone</FormLabel>
-                <FormControl>
-                  <Input {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
+            render={({ field: phoneField }) => (
+              <FormField
+                name="phoneNumber"
+                control={form.control}
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Telefone</FormLabel>
+                    <FormControl>
+                      <Input {...phoneField} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
             )}
           />
         </div>

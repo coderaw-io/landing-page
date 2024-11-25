@@ -49,7 +49,7 @@ export function Header() {
             className="h-12 flex items-center rounded-[0.3rem]"
             href="/"
           >
-            <Logo className="w-1/2 h-auto object-cover" />
+            <Logo className="w-3/4 h-auto object-cover" />
           </Link>
         </div>
 

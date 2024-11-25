@@ -13,7 +13,7 @@ export default function ContactPage() {
           )}
         />
 
-        <div className="relative z-10 flex flex-col space-y-3">
+        <div className="relative z-10 flex flex-col space-y-3 px-6 sm:px-0">
           <h1 className="text-3xl md:text-6xl font-bold">
             Fale conosco
           </h1>
@@ -24,6 +24,7 @@ export default function ContactPage() {
           </p>
         </div>
       </div>
+      
       <ContactForm />
     </div>
   )

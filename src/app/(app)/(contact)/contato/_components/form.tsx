@@ -1,5 +1,7 @@
 "use client"
 
+import axios from "axios";
+
 import {
   Form,
   FormControl,
@@ -15,24 +17,25 @@ import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { LoaderIcon } from "lucide-react";
 import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 import { z } from "zod";
 
 const formSchema = z.object({
+  email: z.string().email("Informe um endereço de e-mail válido."),
   firstName: z.string().min(
     2,
     "O nome deve possuir no minímo 2 caracteres."
   ).max(
-    50,
-    "O nome deve possuir no máximo 50 caracteres."
+    60,
+    "O nome deve possuir no máximo 60 caracteres."
   ),
   lastName: z.string().min(
     2,
     "O nome deve possuir no minímo 2 caracteres."
   ).max(
-    50,
-    "O nome deve possuir no máximo 50 caracteres."
+    60,
+    "O nome deve possuir no máximo 60 caracteres."
   ),
-  email: z.string().email("Informe um endereço de e-mail válido."),
   phoneNumber: z.string().min(
     11,
     "O telefone deve possuir 11 digítos."
@@ -43,41 +46,61 @@ const formSchema = z.object({
   ).max(
     500,
     "O campo mensagem deve possuir no máximo 500 caracteres."
-  ),
+  )
 })
+
+type FormData = z.infer<typeof formSchema>;
 
 export function ContactForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
+      email: "",
       firstName: "",
       lastName: "",
-      email: "",
       phoneNumber: "",
       message: "",
     },
   })
 
-  const onSubmit = form.handleSubmit(async data => {
-    console.log(data);
-  });
+  const onSubmit = async (data: FormData) => {
+    try {
+      await axios.post("/api/create-contact", {
+        email: data.email,
+        firstName: data.firstName,
+        lastName: data.lastName,
+        phoneNumber: data.phoneNumber,
+        message: data.message,
+      });
+
+      toast.success("SUCESSO! RECEMOS O SEU CONTATO", {
+        description: "Te enviamos um e-mail passando as orientações."
+      })
+
+      form.reset();
+    } catch {
+      toast.error("ERRO AO PROCESSAR REQUISIÇÃO", {
+        description: "Verifique os dados digitados e tente novamente."
+      })
+    }
+  }
 
   return (
     <Form {...form}>
       <form
         data-aos="fade-right"
-        className="max-w-5xl w-full py-12 md:py-24"
-        onSubmit={onSubmit}
+        className="max-w-5xl w-full px-6 py-12 sm:px-0 md:py-24"
+        onSubmit={form.handleSubmit(onSubmit)}
       >
         <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2">
           <FormField
-            control={form.control}
             name="firstName"
+            control={form.control}
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Nome</FormLabel>
                 <FormControl>
-                  <Input {...field} />
+                  <Input maxLength={60} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -85,13 +108,13 @@ export function ContactForm() {
           />
 
           <FormField
-            control={form.control}
             name="lastName"
+            control={form.control}
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Sobrenome</FormLabel>
                 <FormControl>
-                  <Input {...field} />
+                  <Input maxLength={60} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -99,13 +122,13 @@ export function ContactForm() {
           />
 
           <FormField
-            control={form.control}
             name="email"
+            control={form.control}
             render={({ field }) => (
               <FormItem>
                 <FormLabel>E-mail</FormLabel>
                 <FormControl>
-                  <Input {...field} />
+                  <Input maxLength={60} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -113,8 +136,8 @@ export function ContactForm() {
           />
 
           <FormField
-            control={form.control}
             name="phoneNumber"
+            control={form.control}
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Telefone</FormLabel>
@@ -129,13 +152,13 @@ export function ContactForm() {
 
         <div className="py-6">
           <FormField
-            control={form.control}
             name="message"
+            control={form.control}
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Mensagem</FormLabel>
                 <FormControl>
-                  <Textarea rows={8} {...field} />
+                  <Textarea rows={8} maxLength={500} {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -149,8 +172,12 @@ export function ContactForm() {
             className="disabled:cursor-not-allowed"
             disabled={form.formState.isSubmitting}
           >
-            {form.formState.isSubmitting ?
-              <LoaderIcon className="size-4 animate-spin" />
+            {form.formState.isSubmitting ? (
+              <div className="flex items-center gap-3">
+                Enviando
+                <LoaderIcon className="size-4 animate-spin" />
+              </div>
+            )
               : "Entrar em contato"}
           </Button>
         </div>

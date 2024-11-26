@@ -43,7 +43,7 @@ export function Footer() {
 
               <li>
                 <Link
-                  href="https://www.instagram.com/coderaw.io/profilecard"
+                  href="https://www.instagram.com/coderaw.io/#"
                   target="_blank"
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary"
                 >
@@ -65,7 +65,7 @@ export function Footer() {
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary"
                 >
                   <MailIcon className="size-4" />
-                  Contato: contato@coderaw.io
+                  Informações: contato@coderaw.io
                 </Link>
               </li>
 

@@ -1,5 +1,6 @@
 import { AnimatedBeamSection } from "@/components/shared/page/animated-beam-section";
 import { BoutiqueSection } from "@/components/shared/page/boutique-section";
+import { FaqSection } from "@/components/shared/page/faq-section";
 import { FlickeringServicesSection } from "@/components/shared/page/flickering-services.section";
 import { Footer } from "@/components/shared/page/footer";
 import { Header } from "@/components/shared/page/header";
@@ -17,6 +18,7 @@ export default function LandingPage() {
       <BoutiqueSection />
       <AnimatedBeamSection />
       <FlickeringServicesSection />
+      <FaqSection />
       <Footer />
     </>
   );

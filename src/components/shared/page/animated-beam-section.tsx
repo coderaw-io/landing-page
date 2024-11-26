@@ -17,7 +17,7 @@ export function AnimatedBeamSection() {
 
         <p className="text-base text-muted-foreground sm:text-lg">
           Centralize a sua operação em um só lugar, com a identidade da sua empresa, 
-          permitindo flexibilidade, customização e domínio total sobre o sistema desenvolvido.
+          permitindo flexibilidade, customização e domínio total sobre o solução desenvolvido.
         </p>
 
         <div className="block md:hidden">

@@ -12,7 +12,7 @@ const michroma = Michroma({
 })
 
 export const metadata: Metadata = {
-  title: "coderaw | tecnologia",
+  title: "coderaw.io | Tecnologia",
   description: "Soluções que impulsionam negócios",
 };
 

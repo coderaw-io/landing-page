@@ -71,16 +71,6 @@ export function Footer() {
 
               <li>
                 <Link
-                  href="mailto:financeiro@coderaw.io"
-                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary"
-                >
-                  <MailIcon className="size-4" />
-                  Financeiro: financeiro@coderaw.io
-                </Link>
-              </li>
-
-              <li>
-                <Link
                   href="mailto:comercial@coderaw.io"
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary"
                 >

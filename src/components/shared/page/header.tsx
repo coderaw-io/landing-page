@@ -37,6 +37,13 @@ export function Header() {
                 Contato
               </Link>
 
+              <Link
+                href="/sobre"
+                className="py-3 text-foreground hover:text-primary focus:outline-none"
+              >
+                Sobre-nós
+              </Link>
+
               <ThemeToggle />
             </div>
           </div>

@@ -1,4 +1,5 @@
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+
 import {
   Sheet,
   SheetContent,
@@ -6,10 +7,11 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger
-} from "@/components/ui/sheet"
-import { AlignJustifyIcon } from "lucide-react"
-import Link from "next/link"
-import { Icon } from "../icons/icon"
+} from "@/components/ui/sheet";
+
+import { Button } from "@/components/ui/button";
+import { AlignJustifyIcon } from "lucide-react";
+import { Icon } from "../icons/icon";
 
 export function MobileMenu() {
   return (
@@ -34,7 +36,7 @@ export function MobileMenu() {
             </span>
           </SheetTitle>
           <SheetDescription className="sr-only">
-            Acesse os link's do seu interesse.
+            Acesse páginas do seu interesse.
           </SheetDescription>
         </SheetHeader>
 
@@ -48,11 +50,19 @@ export function MobileMenu() {
           </Link> */}
 
           <Link
-            href="#"
+            href="/contato"
             className="flex items-center gap-3 text-foreground hover:text-primary focus:outline-none"
           >
             <div className="h-5 w-1 bg-primary" />
             Contato
+          </Link>
+
+          <Link
+            href="/sobre"
+            className="flex items-center gap-3 text-foreground hover:text-primary focus:outline-none"
+          >
+            <div className="h-5 w-1 bg-primary" />
+            Sobre-nós
           </Link>
         </ul>
       </SheetContent>

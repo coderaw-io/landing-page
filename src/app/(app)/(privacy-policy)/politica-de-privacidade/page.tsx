@@ -12,6 +12,7 @@ export default function PrivacyPolicy() {
             height={675}
             className="object cover w-[90%] rounded-[0.3rem]"
             alt="LGPD Imagem"
+            priority
           />
         </div>
 

@@ -5,7 +5,7 @@ import { ContactForm } from "./_components/form";
 
 export default function ContactPage() {
   return (
-    <div className="py-6">
+    <div className="w-full py-6">
       <div data-aos="fade-left" className="relative">
         <DotPattern
           className={cn(

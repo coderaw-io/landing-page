@@ -13,7 +13,7 @@ export function Footer() {
   return (
     <footer data-aos="fade-down" className="px-6 sm:px-0">
       <div className="w-full space-y-16 py-16">
-        <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+        <div className="flex flex-col space-y-12 md:flex-row md:justify-between md:items-center md:space-y-0">
           <div>
             <span className="font-medium text-foreground">
               Social
@@ -95,12 +95,18 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col space-y-3 py-3 sm:flex-row sm:justify-between sm:items-center sm:space-y-0">
-          <span className="text-[11px] text-muted-foreground sm:text-sm">
+          <span className="text-[11px] text-muted-foreground sm:text-[13px]">
             2024 © Copyright - Coderaw Soluções Tecnológicas LTDA.
           </span>
 
-          <span className="text-xs text-muted-foreground sm:text-sm">
-            Todos os direitos reservados.
+          <span className="text-xs text-muted-foreground font-medium sm:text-[13px]">
+            Todos os direitos reservados. {" "}
+            <Link
+              href="/politica-de-privacidade"
+              className="hover:text-primary"
+            >
+              Política de Privacidade
+            </Link>
           </span>
         </div>
       </div>

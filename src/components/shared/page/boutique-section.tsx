@@ -6,7 +6,10 @@ import { cn } from "@/lib/utils";
 
 export function BoutiqueSection() {
   return (
-    <div data-aos="fade-left" className="w-full flex flex-col items-center space-y-6 py-12 md:flex-row md:justify-between md:space-y-0 md:py-24">
+    <div
+      data-aos="fade-left"
+      className="w-full flex flex-col items-center space-y-6 py-12 md:flex-row md:justify-between md:space-y-0 md:py-24"
+    >
       <section className="relative flex flex-col space-y-3 md:space-y-6">
         <GridPattern
           squares={[
@@ -29,21 +32,22 @@ export function BoutiqueSection() {
           )}
         />
 
-        <div className="px-6 md:px-0">
+        <div className="relative z-10 px-6 md:px-0">
           <h4 className="font-medium text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
             Sua Boutique <br />
             de Software
           </h4>
 
-          <div className="max-w-xl text-center mx-auto pt-6 md:pt-0">
+          <div className="max-w-xl text-center mx-auto pt-8">
             <p className="text-base text-muted-foreground sm:text-lg">
-              Nossa equipe de especialistas dedica-se a entregar soluções de excelência, potencializando
-              a qualidade do seu software e impulsionando a sua produtividade ao máximo. Transformamos desafios
-              em resultados e ajudamos você a alcançar um novo patamar de eficiência e inovação.
+              Nossa equipe dedica-se a entregar soluções de excelência, potencializando
+              a qualidade do seu software e impulsionando a sua produtividade ao máximo.
+              Transformamos desafios em resultados e ajudamos você a alcançar um novo
+              patamar de eficiência e inovação.
             </p>
           </div>
 
-          <div className="relative flex justify-center items-center z-10 pt-6 md:pt-12">
+          <div className="flex justify-center items-center pt-6 md:pt-12">
             <Link href="/contato" className="w-full md:max-w-md">
               <Button type="button" className="w-full">
                 Fale conosco

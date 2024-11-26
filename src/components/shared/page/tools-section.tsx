@@ -6,7 +6,7 @@ export function ToolsSection() {
   return (
     <section data-aos="fade-right" className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
-         <HeroPattern />
+        <HeroPattern />
       </div>
 
       <div className="py-16 md:py-24 lg:py-28">
@@ -16,9 +16,10 @@ export function ToolsSection() {
               Atuamos com ferramentas <br />
               modernas do mercado
             </h2>
-            <p className="mt-6 text-muted-foreground sm:text-lg">
-              Entregas contínuas e padrões de projetos para <br />
-              tornar sua solução altamente escalável e manutenível.
+            <p className="mt-8 text-muted-foreground sm:text-lg">
+              Desenvolvemos soluções com diversas ferramentas de mercado, <br />
+              garantindo alta performance, escalabilidade e inovação para <br />
+              atender às demandas do seu negócio.
             </p>
           </div>
 

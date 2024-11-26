@@ -10,7 +10,7 @@ export function AnimatedBeamSection() {
         <AnimatedBeamMultiple />
       </div>
 
-      <div className="flex flex-col space-y-3 px-6">
+      <div className="flex flex-col space-y-8 px-6">
         <h4 className="block font-medium text-4xl sm:text-5xl md:text-6xl">
           Ainda utilizando diversas plataformas?
         </h4>

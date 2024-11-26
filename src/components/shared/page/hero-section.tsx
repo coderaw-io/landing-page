@@ -17,7 +17,7 @@ export function HeroSection() {
         )}
       />
 
-      <div className="relative z-10 max-w-[85rem] mx-auto px-4 py-12 sm:px-6 lg:px-8 sm:py-24 space-y-8">
+      <div className="relative z-10 max-w-[85rem] mx-auto px-4 py-12 sm:px-6 lg:px-8 space-y-8">
         <div className="flex min-h-10 items-center justify-center">
           <div
             className={cn(
@@ -25,9 +25,9 @@ export function HeroSection() {
             )}
           >
             <AnimatedShinyText className="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-foreground hover:duration-300">
-              <span className="flex items-center gap-2 text-sm">
+              <span className="flex items-center gap-2 text-sm italic">
                 <ZapIcon className="size-4" />
-                Sua butique de software
+                Potencializando negócios
               </span>
             </AnimatedShinyText>
           </div>
@@ -41,9 +41,9 @@ export function HeroSection() {
 
         <div className="max-w-3xl text-center mx-auto">
           <p className="text-base text-muted-foreground sm:text-lg">
-            Com tecnologias atuais e estratégias eficientes, é possível <br />
-            inovar e tomar decisões mais assertivas, garantindo <br />
-            competitividade e adaptação rápida ao mercado.
+            Nosso compromisso é entregar soluções de alta qualidade <br />
+            que impulsionam o sucesso de nossos clientes, sempre com <br />
+            uma abordagem consultiva e focada em resultados.
           </p>
         </div>
       </div>

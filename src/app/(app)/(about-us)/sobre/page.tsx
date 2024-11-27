@@ -1,5 +1,6 @@
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
+
+import { Button } from "@/components/ui/button";
 
 export default function AboutUsPage() {
   return (
@@ -37,10 +38,15 @@ export default function AboutUsPage() {
             </div>
           </div>
 
-          <div className="flex justify-center items-center pt-6 md:pt-12 lg:pt-16">
+          <div className="flex justify-center items-center pt-12 lg:pt-16">
             <Link href="/contato">
               <Button type="button" className="px-12">
-                Tenho interesse e quero saber mais
+                <span className="md:hidden">
+                  Entrar em contato
+                </span>
+                <span className="hidden md:flex">
+                  Tenho interesse e quero saber mais
+                </span>
               </Button>
             </Link>
           </div>

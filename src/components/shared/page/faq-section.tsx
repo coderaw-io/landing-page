@@ -17,7 +17,14 @@ export function FaqSection() {
 
       <Accordion type="single" collapsible className="w-full pt-6 md:pt-12">
         <AccordionItem value="item-1">
-          <AccordionTrigger>Quais os tipos de serviços prestados?</AccordionTrigger>
+          <AccordionTrigger>
+            <span className="sm:hidden">
+              Quais os serviços prestados?
+            </span>
+            <span className="hidden sm:flex">
+              Quais os tipos de serviços prestados?
+            </span>
+          </AccordionTrigger>
           <AccordionContent>
             Na coderaw, oferecemos um portfólio abrangente de serviços projetados para atender às
             demandas de empresas que buscam soluções tecnológicas personalizadas, escaláveis e de
@@ -27,7 +34,14 @@ export function FaqSection() {
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-2">
-          <AccordionTrigger>Quais as principais ferramentas utilizadas?</AccordionTrigger>
+          <AccordionTrigger>
+            <span className="sm:hidden">
+              Quais ferramentas utilizadas?
+            </span>
+            <span className="hidden sm:flex">
+              Quais as principais ferramentas utilizadas?
+            </span>
+          </AccordionTrigger>
           <AccordionContent>
             Oferecemos soluções completas em desenvolvimento full-stack, abrangendo desde o
             front-end (interface do usuário) até o back-end e a infraestrutura. Nossa principal
@@ -39,7 +53,14 @@ export function FaqSection() {
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-3">
-          <AccordionTrigger>Atendem empresas com sistemas legados?</AccordionTrigger>
+          <AccordionTrigger>
+            <span className="sm:hidden">
+              Atuam com sistemas legados?
+            </span>
+            <span className="hidden sm:flex">
+              Atendem empresas com sistemas legados?
+            </span>
+          </AccordionTrigger>
           <AccordionContent>
             Sim, atendemos empresas que possuem sistemas legados, desde que a modernização, integração
             ou manutenção desses sistemas esteja alinhada com as ferramentas e tecnologias da nossa especialidade.
@@ -51,7 +72,14 @@ export function FaqSection() {
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-4">
-          <AccordionTrigger>Como funcionam os prazos e entregas?</AccordionTrigger>
+          <AccordionTrigger>
+            <span className="sm:hidden">
+              E os prazos e entregas?
+            </span>
+            <span className="hidden sm:flex">
+              Como funcionam os prazos e entregas?
+            </span>
+          </AccordionTrigger>
           <AccordionContent>
             Na coderaw, prezamos por uma gestão eficiente e transparente de prazos e entregas, alinhando nossas práticas às
             principais metodologias do mercado, como Scrum, Kanban e Metodologias Ágeis. Isso nos permite adaptar cada projeto

@@ -1,24 +1,28 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { MoonIcon, SunIcon } from "lucide-react"
+import { MoonIcon, SunIcon } from 'lucide-react'
 import { useTheme } from "next-themes"
-import { useLayoutEffect } from "react"
+import { useEffect, useState } from "react"
 
 interface ThemeToggleProps {
   className?: string;
 }
 
 export function ThemeToggle({ className }: ThemeToggleProps) {
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
+    setMounted(true)
     setTheme('dark')
-  }, [setTheme])
+  }, [setTheme]);
 
   const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light')
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
   }
+
+  if (!mounted) return null;
 
   return (
     <Button 
@@ -34,3 +38,4 @@ export function ThemeToggle({ className }: ThemeToggleProps) {
     </Button>
   )
 }
+

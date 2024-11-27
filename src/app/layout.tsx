@@ -28,9 +28,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
+          defaultTheme="dark"
         >
           <AOSInit />
           <div className="min-h-screen w-full sm:max-w-6xl sm:w-full sm:mx-auto">

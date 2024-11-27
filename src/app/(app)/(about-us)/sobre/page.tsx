@@ -1,3 +1,6 @@
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
 export default function AboutUsPage() {
   return (
     <div data-aos="fade-left" className="relative overflow-hidden sm:rounded-[0.3rem]">
@@ -32,6 +35,14 @@ export default function AboutUsPage() {
                 consultiva e focada em resultados.
               </p>
             </div>
+          </div>
+
+          <div className="flex justify-center items-center pt-6 md:pt-12 lg:pt-16">
+            <Link href="/contato">
+              <Button type="button" className="px-12">
+                Tenho interesse e quero saber mais
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

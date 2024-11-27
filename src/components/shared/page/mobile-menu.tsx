@@ -41,13 +41,13 @@ export function MobileMenu() {
         </SheetHeader>
 
         <ul className="flex flex-col space-y-6 p-6">
-          {/* <Link
-            href="#"
+          <Link
+            href="/servicos"
             className="flex items-center gap-3 text-foreground hover:text-primary focus:outline-none"
           >
             <div className="h-5 w-1 bg-primary" />
             Serviços
-          </Link> */}
+          </Link>
 
           <Link
             href="/contato"

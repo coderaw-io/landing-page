@@ -16,18 +16,17 @@ export function FlickeringServicesSection() {
 
         <div className="max-w-4xl mx-auto w-full text-left pt-8 lg:pr-4">
           <p className="text-base text-muted-foreground sm:text-lg">
-            Cada organização possui características e demandas exclusivas, o que exige soluções 
-            igualmente personalizadas. Nosso serviço de desenvolvimento sob medida é dedicado a 
-            projetar e implementar sistemas específicos, cuidadosamente alinhados às particularidades 
-            e objetivos estratégicos de cada cliente, garantindo resultados otimizados e plenamente 
-            adequados às suas necessidades.
+            Na Coderaw, unimos inovação e expertise para atender às necessidades únicas
+            de cada cliente. Desenvolvemos soluções tecnológicas sob medida, evoluímos sistemas
+            existentes e oferecemos produtos SaaS modernos, sempre com foco em entregar resultados
+            eficientes e alinhados aos objetivos estratégicos de cada negócio.
           </p>
         </div>
 
         <div className="flex items-center pt-6 md:pt-12">
           <Link href="/contato" className="w-full md:max-w-md">
             <Button type="button" className="w-full">
-              Contratar nossos serviços
+              Saiba mais
             </Button>
           </Link>
         </div>

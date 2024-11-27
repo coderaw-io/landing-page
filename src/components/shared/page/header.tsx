@@ -22,13 +22,13 @@ export function Header() {
             id="hs-navbar-header-floating"
             className="block hs-collapse overflow-hidden transition-all duration-300 basis-full grow"
           >
-            <div className="flex justify-end items-center gap-6 ps-7">
-              {/* <Link
+            <div className="flex justify-end items-center gap-8 ps-8">
+              <Link
                 href="/servicos"
                 className="py-3 text-foreground hover:text-primary focus:outline-none"
               >
                 Serviços
-              </Link> */}
+              </Link>
 
               <Link
                 href="/contato"

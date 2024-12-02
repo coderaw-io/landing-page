@@ -17,9 +17,9 @@ export function ToolsSection() {
               modernas do mercado
             </h2>
             <p className="mt-8 text-muted-foreground sm:text-lg">
-              Desenvolvemos soluções com diversas ferramentas de mercado, <br />
-              garantindo alta performance, escalabilidade e inovação para <br />
-              atender às demandas do seu negócio.
+              Desenvolvemos soluções utilizando as principais ferramentas <br />
+              do mercado, garantindo desempenho, escalabilidade e inovação para <br />
+              atender às necessidades do seu negócio.
             </p>
           </div>
 

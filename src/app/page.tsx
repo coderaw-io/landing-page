@@ -13,8 +13,8 @@ export default function LandingPage() {
     <>
       <Header />
       <HeroSection />
-      <IntegrationsSection />
       <ToolsSection />
+      <IntegrationsSection />
       <BoutiqueSection />
       <AnimatedBeamSection />
       <FlickeringServicesSection />

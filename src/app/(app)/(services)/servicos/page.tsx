@@ -16,7 +16,7 @@ export default function ServicesPage() {
         <div className="w-full flex justify-between items-center">
           <div className="relative z-10 flex flex-col space-y-8 px-6 sm:px-0">
             <h1 className="text-3xl md:text-6xl font-bold">
-              Serviços prestados
+              Transformando Negócios
             </h1>
 
             <p className="max-w-2xl w-full text-base text-muted-foreground sm:text-lg">
@@ -389,7 +389,7 @@ export default function ServicesPage() {
 
               <li>
                 <strong>Desenvolvimento e Implantação:</strong> {" "}
-                Cuidamos de todo o ciclo de vida do sistema, garantindo eficiência e agilidade.
+                Cuidamos de todo o ciclo de vida da solução, garantindo eficiência e agilidade.
               </li>
 
               <li>
@@ -415,11 +415,6 @@ export default function ServicesPage() {
             </p>
 
             <ul className="list-disc space-y-6 px-6 sm:px-0">
-              <li>
-                <strong>Atualização de Tecnologias:</strong> {" "}
-                Trazemos sistemas legados para padrões modernos.
-              </li>
-
               <li>
                 <strong>Melhorias de Performance:</strong> {" "}
                 Identificamos e corrigimos gargalos, tornando sua solução mais eficiente.

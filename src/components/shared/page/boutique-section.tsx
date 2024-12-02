@@ -50,7 +50,7 @@ export function BoutiqueSection() {
           <div className="flex justify-center items-center pt-6 md:pt-12">
             <Link href="/contato" className="w-full md:max-w-md">
               <Button type="button" className="w-full">
-                Fale conosco
+                Nossos serviços
               </Button>
             </Link>
           </div>

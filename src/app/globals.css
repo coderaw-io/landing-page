@@ -75,6 +75,7 @@
     dark:[&::-webkit-scrollbar-track]:bg-background
     dark:[&::-webkit-scrollbar-thumb]:bg-primary;
   }
+
   body {
     @apply bg-background text-foreground;
 

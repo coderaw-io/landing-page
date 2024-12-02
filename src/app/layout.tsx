@@ -3,7 +3,7 @@ import "./globals.css";
 import { AOSInit } from "@/components/shared/aos-init";
 import { ThemeProvider } from "@/components/shared/theme-provider";
 import type { Metadata } from "next";
-import { Michroma } from "next/font/google";
+import { Michroma, Oxanium } from "next/font/google";
 import { Toaster } from 'sonner';
 
 const michroma = Michroma({
@@ -11,8 +11,12 @@ const michroma = Michroma({
   subsets: ["latin"]
 })
 
+export const oxanium = Oxanium({
+  subsets: ["latin"],
+})
+
 export const metadata: Metadata = {
-  title: "coderaw.io | Tecnologia",
+  title: "Tecnologia | coderaw.io",
   description: "Soluções que impulsionam negócios",
 };
 
@@ -23,9 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body
-        className={`${michroma.className} antialiased`}
-      >
+      <body className={`${michroma.className} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

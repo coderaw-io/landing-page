@@ -32,8 +32,8 @@ export default function AboutUsPage() {
                 produtos que ajudam tanto empresas quanto pessoas a otimizar processos e melhorar sua eficiência. Ao unir consultoria,
                 desenvolvimento de software e inovação no modelo SaaS, conseguimos fornecer soluções completas e integradas que fazem a
                 diferença na vida de nossos clientes. <br /> <br />
-                Nosso compromisso é entregar soluções de alta qualidade que impulsionam o sucesso de nossos clientes, sempre com uma abordagem
-                consultiva e focada em resultados.
+                Nosso compromisso é oferecer soluções de alta qualidade que impulsionam o sucesso de nossos clientes, com uma abordagem 
+                consultiva, estratégica e orientada a resultados.
               </p>
             </div>
           </div>

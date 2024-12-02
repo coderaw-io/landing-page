@@ -14,9 +14,9 @@ export function FlickeringServicesSection() {
           Nossos serviços
         </h4>
 
-        <div className="max-w-4xl mx-auto w-full text-left pt-8 lg:pr-4">
+        <div className="max-w-lg w-full text-left pt-8">
           <p className="text-base text-muted-foreground sm:text-lg">
-            Na Coderaw, unimos inovação e expertise para atender às necessidades únicas
+            Na coderaw, unimos inovação e expertise para atender às necessidades únicas
             de cada cliente. Desenvolvemos soluções tecnológicas sob medida, evoluímos sistemas
             existentes e oferecemos produtos SaaS modernos, sempre com foco em entregar resultados
             eficientes e alinhados aos objetivos estratégicos de cada negócio.

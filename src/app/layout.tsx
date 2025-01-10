@@ -3,16 +3,12 @@ import "./globals.css";
 import { AOSInit } from "@/components/shared/aos-init";
 import { ThemeProvider } from "@/components/shared/theme-provider";
 import type { Metadata } from "next";
-import { Michroma, Oxanium } from "next/font/google";
+import { Michroma } from "next/font/google";
 import { Toaster } from 'sonner';
 
 const michroma = Michroma({
   weight: ["400"],
   subsets: ["latin"]
-})
-
-export const oxanium = Oxanium({
-  subsets: ["latin"],
 })
 
 export const metadata: Metadata = {

@@ -86,7 +86,7 @@ export function Footer() {
 
         <div className="flex flex-col space-y-3 py-3 sm:flex-row sm:justify-between sm:items-center sm:space-y-0">
           <span className="text-[11px] text-muted-foreground sm:text-[13px]">
-            2024 © Copyright - Coderaw Soluções Tecnológicas LTDA.
+            2024 © Copyright - Coderaw Solucoes Tecnologicas LTDA.
           </span>
 
           <span className="text-xs text-muted-foreground font-medium sm:text-[13px]">

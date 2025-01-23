@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import axios from "axios";
 
@@ -8,7 +8,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage
+  FormMessage,
 } from "@/components/ui/form";
 
 import { maskPhoneNumber } from "@/app/utils/mask-phone-number";
@@ -24,32 +24,20 @@ import { z } from "zod";
 
 const formSchema = z.object({
   email: z.string().email("Informe um endereço de e-mail válido."),
-  firstName: z.string().min(
-    2,
-    "O nome deve possuir no minímo 2 caracteres."
-  ).max(
-    60,
-    "O nome deve possuir no máximo 60 caracteres."
-  ),
-  lastName: z.string().min(
-    2,
-    "O nome deve possuir no minímo 2 caracteres."
-  ).max(
-    60,
-    "O nome deve possuir no máximo 60 caracteres."
-  ),
-  phoneNumber: z.string().min(
-    11,
-    "O telefone deve possuir 11 digítos."
-  ),
-  message: z.string().min(
-    10,
-    "O campo mensagem possui uma descrição muito curta."
-  ).max(
-    500,
-    "O campo mensagem deve possuir no máximo 500 caracteres."
-  )
-})
+  firstName: z
+    .string()
+    .min(2, "O nome deve possuir no minímo 2 caracteres.")
+    .max(60, "O nome deve possuir no máximo 60 caracteres."),
+  lastName: z
+    .string()
+    .min(2, "O nome deve possuir no minímo 2 caracteres.")
+    .max(60, "O nome deve possuir no máximo 60 caracteres."),
+  phoneNumber: z.string().min(11, "O telefone deve possuir 11 digítos."),
+  message: z
+    .string()
+    .min(10, "O campo mensagem possui uma descrição muito curta.")
+    .max(500, "O campo mensagem deve possuir no máximo 500 caracteres."),
+});
 
 type FormData = z.infer<typeof formSchema>;
 
@@ -63,13 +51,13 @@ export function ContactForm() {
       phoneNumber: "",
       message: "",
     },
-  })
+  });
 
-  const phoneNumber = form.watch('phoneNumber');
+  const phoneNumber = form.watch("phoneNumber");
 
   useEffect(() => {
-    form.setValue('phoneNumber', maskPhoneNumber(phoneNumber));
-  }, [phoneNumber, form.setValue]);
+    form.setValue("phoneNumber", maskPhoneNumber(phoneNumber));
+  }, [phoneNumber, form, form.setValue]);
 
   const onSubmit = async (data: FormData) => {
     try {
@@ -82,16 +70,16 @@ export function ContactForm() {
       });
 
       toast.success("SUCESSO! RECEMOS O SEU CONTATO", {
-        description: "Te enviamos um e-mail passando as orientações."
-      })
+        description: "Te enviamos um e-mail passando as orientações.",
+      });
 
       form.reset();
     } catch {
       toast.error("ERRO AO PROCESSAR REQUISIÇÃO", {
-        description: "Verifique os dados digitados e tente novamente."
-      })
+        description: "Verifique os dados digitados e tente novamente.",
+      });
     }
-  }
+  };
 
   return (
     <Form {...form}>
@@ -191,11 +179,13 @@ export function ContactForm() {
                 Enviando
                 <LoaderIcon className="size-4 animate-spin" />
               </div>
-            )
-              : "Entrar em contato"}
+            ) : (
+              "Entrar em contato"
+            )}
           </Button>
         </div>
       </form>
     </Form>
-  )
+  );
 }
+

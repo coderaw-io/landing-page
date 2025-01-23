@@ -31,17 +31,10 @@ export function Header() {
               </Link>
 
               <Link
-                href="/contato"
-                className="py-3 text-foreground hover:text-primary focus:outline-none"
+                href="/trabalhe-conosco"
+                className="py-3 text-foreground truncate hover:text-primary focus:outline-none"
               >
-                Contato
-              </Link>
-
-              <Link
-                href="/sobre"
-                className="py-3 text-foreground hover:text-primary focus:outline-none"
-              >
-                Sobre-nós
+                Trabalhe conosco
               </Link>
 
               <ThemeToggle />

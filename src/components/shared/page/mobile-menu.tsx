@@ -50,19 +50,11 @@ export function MobileMenu() {
           </Link>
 
           <Link
-            href="/contato"
+            href="/trabalhe-conosco"
             className="flex items-center gap-3 text-foreground hover:text-primary focus:outline-none"
           >
             <div className="h-5 w-1 bg-primary" />
-            Contato
-          </Link>
-
-          <Link
-            href="/sobre"
-            className="flex items-center gap-3 text-foreground hover:text-primary focus:outline-none"
-          >
-            <div className="h-5 w-1 bg-primary" />
-            Sobre-nós
+            Trabalhe conosco
           </Link>
         </ul>
       </SheetContent>

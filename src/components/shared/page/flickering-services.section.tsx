@@ -9,7 +9,7 @@ export function FlickeringServicesSection() {
       data-aos="fade-left"
       className="relative w-full flex flex-col items-center space-y-6 py-12 md:flex-row md:justify-between md:space-y-0 md:py-24"
     >
-      <div className="relative z-10 w-full px-6 sm:px-0">
+      <div className="relative z-10 w-full px-6 pb-8 md:px-0 md:pb-0">
         <h4 className="font-medium text-4xl text-left sm:text-5xl md:text-6xl lg:text-7xl">
           Nossos serviços
         </h4>

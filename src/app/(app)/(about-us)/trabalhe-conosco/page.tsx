@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 
-export default function AboutUsPage() {
+export default function WorkWithUsPage() {
   return (
     <div data-aos="fade-left" className="relative overflow-hidden sm:rounded-[0.3rem]">
       <div
